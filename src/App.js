@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllPokemon, getPokemon } from "./utils/pokemon.js";
 import "./App.css";
 import Card from "./components/Card/Card.js";
+import Navbar from "./components/Navbar/Navbar.js";
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="App">
       {/* trueの場合はロード中/falseの場合は取得しましたを返す */}
       {loading ? (
@@ -47,6 +50,7 @@ function App() {
         </>
       )}
     </div>
+    </>
   );
 }
 
